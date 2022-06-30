@@ -17,7 +17,6 @@ class barangkeluar extends ResourceController
         $data['barangkeluar'] = $model->orderBy('id_transaksi', 'DESC')->findAll();
         return $this->respond($data);
     }
-
     // membuat data barang keluar
     public function create()
     {
