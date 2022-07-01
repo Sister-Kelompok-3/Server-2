@@ -42,8 +42,8 @@ $routes->get('/detailbarangkeluar', 'detailbarangkeluar::index');
 $routes->post('/barangkeluar', 'barangkeluar::create');
 $routes->post('/detailbarangkeluar', 'detailbarangkeluar::create');
 
-$routes->post('/barangkeluar/(:segment)', 'barangkeluar::update/$1');
-$routes->post('/detailbarangkeluar/(:segment)', 'detailbarangkeluar::update/$1');
+// $routes->put('/barangkeluar/(:segment)', 'barangkeluar::update/$1');
+// $routes->put('/detailbarangkeluar/(:segment)', 'detailbarangkeluar::update/$1');
 
 $routes->delete('/barangkeluar/(:segment)', 'barangkeluar::delete/$1');
 $routes->delete('/detailbarangkeluar/(:segment)', 'detailbarangkeluar::delete/$1');
