@@ -39,14 +39,14 @@ $routes->get('/', 'Home::index');
 $routes->get('/barangkeluar', 'barangkeluar::index');
 $routes->get('/detailbarangkeluar', 'detailbarangkeluar::index');
 
-$routes->post('/barangkeluar', 'barangkeluar::create');
-$routes->post('/detailbarangkeluar', 'detailbarangkeluar::create');
+$routes->post('/barangkeluar_add', 'barangkeluar::create');
+$routes->post('/detailbarangkeluar_add', 'detailbarangkeluar::create');
 
-// $routes->put('/barangkeluar/(:segment)', 'barangkeluar::update/$1');
-// $routes->put('/detailbarangkeluar/(:segment)', 'detailbarangkeluar::update/$1');
+$routes->put('/barangkeluar/(:segment)', 'barangkeluar::update/$1');
+$routes->put('/detailbarangkeluar/(:segment)', 'detailbarangkeluar::update/$1');
 
-$routes->delete('/barangkeluar/(:segment)', 'barangkeluar::delete/$1');
-$routes->delete('/detailbarangkeluar/(:segment)', 'detailbarangkeluar::delete/$1');
+$routes->delete('/barangkeluar_delete/(:segment)', 'barangkeluar::delete/$1');
+$routes->delete('/detailbarangkeluar_delete/(:segment)', 'detailbarangkeluar::delete/$1');
 
 /*
  * --------------------------------------------------------------------

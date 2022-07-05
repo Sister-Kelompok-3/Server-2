@@ -22,6 +22,8 @@ class detailbarangkeluar extends ResourceController
     {
         $model = new DetailBarangKeluarModel();
         $data = [
+            'id_transaksi' => $this->request->getPost('id_transaksi'),
+            'kode_barang' => $this->request->getPost('kodebarang'),
             'jumlah' => $this->request->getVar('jumlah'),
 
         ];
@@ -40,6 +42,7 @@ class detailbarangkeluar extends ResourceController
     public function update($id_transaksi = null)
     {
         $this->barangkeluar->update($id_transaksi, [
+            'kode_barang' => $this->request->getPost('kodebarang'),
             'jumlah' => $this->request->getPost('jumlah'),
 
 
