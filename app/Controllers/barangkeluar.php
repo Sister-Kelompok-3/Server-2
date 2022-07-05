@@ -23,6 +23,9 @@ class barangkeluar extends ResourceController
         $model = new BarangKeluarModel();
 
         $data = [
+            'id_transaksi' => $this->request->getPost('id_transaksi'),
+            'kode_barang' => $this->request->getPost('kode_barang'),
+            'tanggal' => $this->request->getPost('tanggal'),
             'lokasi'  => $this->request->getPost('lokasi'),
             'jumlah'  => $this->request->getPost('jumlah'),
 
@@ -44,6 +47,7 @@ class barangkeluar extends ResourceController
         $model = new BarangKeluarModel();
 
         $this->barangkeluar->update($id_transaksi, [
+            'kode_barang' => $this->request->getPost('kode_barang'),
             'tanggal' => $this->request->getPost('tanggal'),
             'lokasi' => $this->request->getPost('lokasi')
 
